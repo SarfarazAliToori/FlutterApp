@@ -157,6 +157,10 @@ class _MyScaffoldAppState extends State<MyScaffoldApp> {
                     child: Text("About Dialog"),
                     color: Colors.brown,
                   ),
+                  OutlinedButton(
+                    onPressed: () {},
+                    child: Text("dialog"),
+                  ),
                 ],
               ),
             ),
