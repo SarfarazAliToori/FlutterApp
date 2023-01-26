@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/ExpansionTile.dart';
+import 'package:flutter_application_1/SliverAppBar.dart';
+import 'package:flutter_application_1/TimePickerWiget.dart';
+import 'package:flutter_application_1/WrapWidget.dart';
+import 'package:flutter_application_1/choice_chip.dart';
 import 'package:flutter_application_1/forth_screen.dart';
 import 'package:flutter_application_1/third_screen.dart';
 import 'dart:ffi';
@@ -29,6 +34,11 @@ class _TestAppState extends State<TestApp> {
         ForthScreen.forthScreenRout: (context) => ForthScreen(),
         FormScreen.formScreenRout: (context) => FormScreen(),
         MyAboutDialog.myAboutDialogRout: (context) => MyAboutDialog(),
+        MyChoicChip.choiceChipRoute: (context) => MyChoicChip(),
+        MySliverAppBar.mySliverAppBarRoute: (context) => MySliverAppBar(),
+        MyExpansionTile.myExpansionTileRoute: (context) => MyExpansionTile(),
+        MyWrapWidget.myWrapWidgetRoute: (context) => MyWrapWidget(),
+        MyTimePickerWidget.timePickerRoute: (context) => MyTimePickerWidget(),
       },
     );
   }
@@ -158,21 +168,54 @@ class _MyScaffoldAppState extends State<MyScaffoldApp> {
                     color: Colors.brown,
                   ),
                   OutlinedButton(
-                    onPressed: () {},
-                    child: Text("dialog"),
+                    onPressed: () {
+                      Navigator.of(context)
+                          .pushNamed(MyChoicChip.choiceChipRoute);
+                    },
+                    child: Text("Choice Chip"),
+                  ),
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.of(context)
+                          .pushNamed(MySliverAppBar.mySliverAppBarRoute);
+                    },
+                    child: Text("Sliver app Bar"),
+                  ),
+                  MaterialButton(
+                    color: Colors.indigo,
+                    textColor: Colors.white,
+                    onPressed: () {
+                      Navigator.of(context)
+                          .pushNamed(MyExpansionTile.myExpansionTileRoute);
+                    },
+                    child: Text("Expansion Tile"),
+                  ),
+                  OutlinedButton(
+                    onPressed: () {
+                      Navigator.of(context)
+                          .pushNamed(MyWrapWidget.myWrapWidgetRoute);
+                    },
+                    child: Text("Wrap Widget"),
+                  ),
+                  OutlinedButton(
+                    onPressed: () {
+                      Navigator.of(context)
+                          .pushNamed(MyTimePickerWidget.timePickerRoute);
+                    },
+                    child: Text("Time Piker"),
                   ),
                 ],
               ),
             ),
-            Container(
-              alignment: Alignment.center,
-              height: 300,
-              width: 300,
-              margin: EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 0.0),
-              padding: EdgeInsets.all(10),
-              child: Image.network(
-                  "https://www.thewowstyle.com/wp-content/uploads/2015/07/autunm-desktop-natural-hd-wallpapers.jpg"),
-            ),
+            // Container(
+            //   alignment: Alignment.center,
+            //   height: 300,
+            //   width: 300,
+            //   margin: EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 0.0),
+            //   padding: EdgeInsets.all(10),
+            //   child: Image.network(
+            //       "https://www.thewowstyle.com/wp-content/uploads/2015/07/autunm-desktop-natural-hd-wallpapers.jpg"),
+            // ),
             Container(
               alignment: Alignment.center,
               height: 300,
