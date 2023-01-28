@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/BottomNavigationBar.dart';
 import 'package:flutter_application_1/ExpansionTile.dart';
+import 'package:flutter_application_1/PageView.dart';
+import 'package:flutter_application_1/PopupMenuButton.dart';
+import 'package:flutter_application_1/RangeSlider.dart';
 import 'package:flutter_application_1/SliverAppBar.dart';
 import 'package:flutter_application_1/TimePickerWiget.dart';
 import 'package:flutter_application_1/WrapWidget.dart';
@@ -39,6 +43,11 @@ class _TestAppState extends State<TestApp> {
         MyExpansionTile.myExpansionTileRoute: (context) => MyExpansionTile(),
         MyWrapWidget.myWrapWidgetRoute: (context) => MyWrapWidget(),
         MyTimePickerWidget.timePickerRoute: (context) => MyTimePickerWidget(),
+        MyRangeSlider.myRangeSliderRoute: (context) => MyRangeSlider(),
+        MyPopUpMenu.myPopupMenuRoute: (context) => MyPopUpMenu(),
+        MyPageView.myPageViewRoute: (context) => MyPageView(),
+        MyBottomNavigationBar.myBottomNavigationBarRoute: (context) =>
+            MyBottomNavigationBar(),
       },
     );
   }
@@ -203,6 +212,36 @@ class _MyScaffoldAppState extends State<MyScaffoldApp> {
                           .pushNamed(MyTimePickerWidget.timePickerRoute);
                     },
                     child: Text("Time Piker"),
+                  ),
+                  MaterialButton(
+                    color: Colors.grey,
+                    onPressed: () {
+                      Navigator.of(context)
+                          .pushNamed(MyRangeSlider.myRangeSliderRoute);
+                    },
+                    child: Text("Range Slider"),
+                  ),
+                  OutlinedButton(
+                    onPressed: () {
+                      Navigator.of(context)
+                          .pushNamed(MyPopUpMenu.myPopupMenuRoute);
+                    },
+                    child: Text("PopUp Menu"),
+                  ),
+                  OutlinedButton(
+                    onPressed: () {
+                      Navigator.of(context)
+                          .pushNamed(MyPageView.myPageViewRoute);
+                    },
+                    child: Text("Page View"),
+                  ),
+                  MaterialButton(
+                    color: Colors.indigo,
+                    onPressed: () {
+                      Navigator.of(context).pushNamed(
+                          MyBottomNavigationBar.myBottomNavigationBarRoute);
+                    },
+                    child: Text("BottomNavigationBar"),
                   ),
                 ],
               ),

@@ -40,13 +40,7 @@ class _MyTimePickerWidgetState extends State<MyTimePickerWidget> {
               style: TextStyle(fontSize: 50),
             ),
             FloatingActionButton(
-              onPressed: () async {
-                DateTime.now();
-                Text(
-                  "Date : ${DateTime.now()}",
-                  style: TextStyle(fontSize: 50),
-                );
-              },
+              onPressed: () async {},
               child: Icon(Icons.date_range_outlined),
             ),
           ],
